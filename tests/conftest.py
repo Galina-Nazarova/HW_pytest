@@ -1,8 +1,11 @@
 import pytest
 
+
+# фикстура
 @pytest.fixture
-def numbers():
-    return "321" # ожидаемый результат
+def card_numbers():
+    return "7000 79** **** 6361" # ожидаемый результат
+
 
 @pytest.fixture
 def letters():

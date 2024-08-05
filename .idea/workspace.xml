@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/code_cov_try.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/mask.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tdd_try.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widget.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_code_cov_try.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_filter_by_state.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_processing.py" afterDir="false" />
+    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="tests add">
+      <change afterPath="$PROJECT_DIR$/tests/test_mask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,8 +22,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Galina-Nazarova"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Galina-Nazarova/HW_pytest.git",
+    "accountId": "bd3446a4-67ac-4b71-a4a4-a0fa23e82046"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -54,13 +56,15 @@
     "Python tests.Python tests for test_processing.test_add.executor": "Run",
     "Python tests.Python tests in test_code_cov_try.py.executor": "Run",
     "Python tests.Python tests in test_filter_by_state.py.executor": "Run",
+    "Python tests.Python tests in test_mask.py.executor": "Run",
     "Python tests.Python tests in test_processing.py.executor": "Run",
+    "Python.mask.executor": "Run",
     "Python.processing.executor": "Run",
     "Python.tdd_try.executor": "Run",
     "Python.test_processing.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/РАБОТА/ПИШ/2024/август/cat_cracking_v.0.1",
+    "git-widget-placeholder": "feature",
+    "last_opened_file_path": "C:/Pythom_prog/HW_pytest",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -71,7 +75,7 @@
       <recent name="C:\Pythom_prog\pythonProject" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_code_cov_try.test_finder_not_list">
+  <component name="RunManager">
     <configuration name="processing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="ENV_FILES" value="" />
@@ -148,10 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_code_cov_try.test_finder_not_list" />
-        <item itemvalue="Python.processing" />
         <item itemvalue="Python tests.Python tests for test_processing.test_add" />
+        <item itemvalue="Python tests.Python tests for test_code_cov_try.test_finder_not_list" />
         <item itemvalue="Python.test_processing" />
+        <item itemvalue="Python.processing" />
+        <item itemvalue="Python tests.Python tests for test_code_cov_try.test_finder_not_list" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +176,19 @@
       <option name="presentableId" value="Default" />
       <updated>1722442938133</updated>
     </task>
+    <task id="LOCAL-00001" summary="tests add">
+      <option name="closed" value="true" />
+      <created>1722854392031</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722854392031</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="tests add" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests add" />
   </component>
 </project>
