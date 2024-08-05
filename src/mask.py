@@ -1,17 +1,22 @@
 
 
-def get_mask_card_number(card_number: int) -> str:
+def get_mask_card_number(card_number: str) -> str:
     """Функция вернет замаскированный номер карты в соответствии с шаблоном
     XXXX XX** **** XXXX, где X — это цифра номера"""
-    place_of_space = [4, 9, 14]
-    place_of_star = [7, 8, 10, 11, 12, 13]
-    card_number_list = list(map(int, str(card_number)))
-    for i in range(len(card_number_list)):
-        if i in place_of_star:
-            card_number_list[i] = "*"
-        if i in place_of_space:
-            card_number_list.insert(i, " ")
-    return "".join(map(str, card_number_list))
+    if len(card_number) > 16:
+        return "Длина номера карты более 16 знаков"
+    elif card_number== "":
+        return "Номер карты отсутствует"
+    else:
+        place_of_space = [4, 9, 14]
+        place_of_star = [7, 8, 10, 11, 12, 13]
+        card_number_list = list(map(int, card_number))
+        for i in range(len(card_number_list)):
+            if i in place_of_star:
+                card_number_list[i] = "*"
+            if i in place_of_space:
+                card_number_list.insert(i, " ")
+        return "".join(map(str, card_number_list))
 
 
 def get_mask_account(bank_account: int) -> str:

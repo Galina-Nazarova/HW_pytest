@@ -1,13 +1,16 @@
+import pytest
 from src.mask import get_mask_card_number
 
-def test_get_mask_card_number_fixture(card_numbers):
-        assert get_mask_card_number(7000792289606361) == card_numbers
+def test_get_mask_card_number_empty(empty_string):
+        assert get_mask_card_number("") == empty_string
 
-
+# Параметризация. Проверка работы функции на различных входных
+# форматах номеров карт, включая граничные случаи и нестандартные длины номеров.
+# Тестирование правильности маскирования номера карты
 @pytest.mark.parametrize('value, expected', [
-    ("123", "321"),
-    ("hello", "olleh"),
-    ("world", "dlrow"),
+    ("7000792289606361", "7000 79** **** 6361"),
+    ("7000792289606362", "7000 79** **** 6362"),
+    ("700079228960636333", "Длина номера карты более 16 знаков"),
 ]
                          )
 def test_get_mask_card_number_parametrize(value, expected):
