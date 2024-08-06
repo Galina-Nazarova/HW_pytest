@@ -1,13 +1,14 @@
 
 import src.processing as proc
 import pytest
+from src.processing import calculate_logariphm
 
 
 
 """def test_add():
     assert add(2, 2) == 4
 
-
+"""
 def test_calculate_logariphm():
     assert calculate_logariphm(8, 2) == 3.0
     assert calculate_logariphm(8, 4) == 1.5
@@ -17,14 +18,14 @@ def test_calculate_logariphm():
         calculate_logariphm(0, 2)
 
     with pytest.raises(ValueError):
-        calculate_logariphm(8, 0)"""
+        calculate_logariphm(8, 0)
 #для декоратора
 """def test_reverse_string_numbers(numbers):
     assert proc.reverse_string("123") == numbers
 
 
 def test_reverse_string_letters(letters):
-    assert proc.reverse_string("hello") == letters"""
+    assert proc.reverse_string("hello") == letters
 
 # для параметризации
 
@@ -35,4 +36,4 @@ def test_reverse_string_letters(letters):
 ]
                          )
 def test_reverse_string_numbers(value, expected):
-    assert proc.reverse_string(value) == expected
+    assert proc.reverse_string(value) == expected"""

@@ -9,12 +9,18 @@ def mask_account_card(type_and_number_of_card: str) -> str:
      **XXXX, где X — это цифра номера счета
      XXXX XX** **** XXXX, где X — это цифра номера карты
       с названием
-
       """
+
+    def calculate_logarithm(number):
+        if number <= 0:
+            raise ValueError("Логарифм можно вычислить только для положительных чисел")
+        return math.log(number)
     name = ''
     digit = ''
     for el in type_and_number_of_card:
-        if el.isdigit():
+        if el == '!':
+            raise AssertionError("Даны некорректные данные")
+        elif el.isdigit():
             digit += el
         else:
             name += el
