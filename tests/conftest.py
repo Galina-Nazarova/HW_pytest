@@ -28,3 +28,15 @@ def letters():
 @pytest.fixture
 def is_true_data_formate():
     return "11.03.2024" # ожидаемый результат
+
+
+@pytest.fixture
+def is_true_state_value():
+    return [
+        {
+            'id': 594226727, 'state': 'CANCELED', 'date': '2018-09-12T21:27:25.241689'
+        }, {
+            'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'
+        }
+    ] # ожидаемый результат
+

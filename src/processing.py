@@ -13,6 +13,9 @@ def filter_by_state(dict_list: list, state_key='EXECUTED') -> list:
         # условие для проверки равенства значения ключа tste аданному аргументу
         if dict_['state'] == state_key:
             new_dict_list.append(dict_)
+    if new_dict_list == []:
+        raise AssertionError("Нет словарей с указанным статусом")
+
     return new_dict_list
 
 
