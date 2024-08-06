@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="unused del">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-    </list>
+    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="gitignore add" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +68,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Pythom_prog\HW_pytest" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Pythom_prog\pythonProject\tests" />
       <recent name="C:\Pythom_prog\pythonProject\src" />
@@ -251,7 +250,23 @@
       <option name="project" value="LOCAL" />
       <updated>1722963667922</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="unused del">
+      <option name="closed" value="true" />
+      <created>1722965132624</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722965132624</updated>
+    </task>
+    <task id="LOCAL-00011" summary="gitignore add">
+      <option name="closed" value="true" />
+      <created>1722965328440</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1722965328440</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -264,6 +279,7 @@
     <MESSAGE value="filter_by_state add tests" />
     <MESSAGE value="sort_by_date add tests" />
     <MESSAGE value="unused del" />
-    <option name="LAST_COMMIT_MESSAGE" value="unused del" />
+    <MESSAGE value="gitignore add" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore add" />
   </component>
 </project>
