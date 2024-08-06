@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="get_date add tests">
+    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="filter_by_state add tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
@@ -60,6 +60,7 @@
     "Python tests.Python tests in test_mask.py.executor": "Run",
     "Python tests.Python tests in test_processing.py.executor": "Run",
     "Python tests.Python tests in test_widget.py.executor": "Run",
+    "Python.conftest.executor": "Run",
     "Python.mask.executor": "Run",
     "Python.processing.executor": "Run",
     "Python.tdd_try.executor": "Run",
@@ -227,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722958752095</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="filter_by_state add tests">
+      <option name="closed" value="true" />
+      <created>1722960281543</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1722960281543</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -237,6 +246,7 @@
     <MESSAGE value="get_mask_account_card add tests" />
     <MESSAGE value="mask_account_card add tests" />
     <MESSAGE value="get_date add tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="get_date add tests" />
+    <MESSAGE value="filter_by_state add tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="filter_by_state add tests" />
   </component>
 </project>

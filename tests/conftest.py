@@ -40,3 +40,12 @@ def is_true_state_value():
         }
     ] # ожидаемый результат
 
+
+@pytest.fixture
+def is_one_date_sort_correct():
+    return [
+        {'id': 41428829, 'state': 'EXECUTED', 'date': '2018-10-14T18:35:29.512364'},
+        {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-10-14T18:35:29.512364'},
+        {'id': 594226727, 'state': 'CANCELED', 'date': '2018-10-14T18:35:29.512364'},
+        {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T18:35:29.512364'}
+    ] # ожидаемый результат
