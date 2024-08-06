@@ -10,11 +10,6 @@ def mask_account_card(type_and_number_of_card: str) -> str:
      XXXX XX** **** XXXX, где X — это цифра номера карты
       с названием
       """
-
-    def calculate_logarithm(number):
-        if number <= 0:
-            raise ValueError("Логарифм можно вычислить только для положительных чисел")
-        return math.log(number)
     name = ''
     digit = ''
     for el in type_and_number_of_card:
@@ -35,6 +30,8 @@ def mask_account_card(type_and_number_of_card: str) -> str:
 def get_date(initial_data_format: str) -> str:
     """Функция вернет дату в соответствии с шаблоном
     "ДД.ММ.ГГГГ" ("11.03.2024") """
+    if initial_data_format == '':
+        raise AssertionError("Даны некорректные данные")
     date = initial_data_format[8:10] + '.'
     date_format = date + initial_data_format[5:7] + '.' + initial_data_format[:4]
     return date_format

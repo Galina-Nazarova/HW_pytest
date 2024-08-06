@@ -39,8 +39,16 @@ def test_mask_account_card_parametrize(value, expected):
 #Тестирование правильности преобразования даты.
 def test_get_date(is_true_data_formate):
     assert get_date("2024-03-11T02:26:18.671407") == is_true_data_formate
+    # Тестирование некорректных данных и проверка ее устойчивости к ошибкам
+    with pytest.raises(AssertionError) as exc_info:
+        get_date("")
+
+    # Проверяем, что сообщение об ошибке соответствует ожидаемому
+    assert str(exc_info.value) == "Даны некорректные данные"
 
 #Проверка работы функции на различных входных форматах даты,
+# включая граничные случаи и нестандартные строки с датами.
+#Проверка, что функция корректно обрабатывает входные строки, где отсутствует дата.
 
 @pytest.mark.parametrize('value, expected', [
     ("2024-03-12T02:26:18.671407", "12.03.2024"),
@@ -49,5 +57,8 @@ def test_get_date(is_true_data_formate):
                          )
 def test_get_date_parametrize(value, expected):
     assert get_date(value) == expected
-# включая граничные случаи и нестандартные строки с датами.
+
+
+
+
 #Проверка, что функция корректно обрабатывает входные строки, где отсутствует дата
