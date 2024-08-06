@@ -20,9 +20,6 @@ def is_account():
 @pytest.fixture
 def is_card_number():
     return "Visa Platinum 7000 79** **** 6361" # ожидаемый результат
-@pytest.fixture
-def letters():
-    return "olleh" # ожидаемый результат
 
 #Тестирование правильности преобразования даты.
 @pytest.fixture

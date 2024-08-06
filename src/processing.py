@@ -23,7 +23,7 @@ def sort_by_date(dict_list: list, sort_rules: bool = True) -> list:
     по дате (date)."""
     return sorted(dict_list, key=lambda x: x['date'], reverse=sort_rules)
 
-
+"""
 if __name__ == '__main__':
     data = [
         {'id': 41428829, 'state': 'EXECUTED', 'date': '2018-10-14T18:35:29.512364'},
@@ -37,6 +37,6 @@ if __name__ == '__main__':
         {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-10-14T18:35:29.512364'},
         {'id': 594226727, 'state': 'CANCELED', 'date': '2018-10-14T18:35:29.512364'},
         {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T18:35:29.512364'}
-    ]))
+    ]))"""
 
 
