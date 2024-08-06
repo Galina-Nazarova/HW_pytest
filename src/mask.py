@@ -1,14 +1,14 @@
 from typing import Union
 
 
-def get_mask_card_number(card_number: Union[str, int]) -> str:
+def get_mask_card_number(card_number: Union[str, int, list]) -> str:
     """Функция вернет замаскированный номер карты в соответствии с шаблоном
     XXXX XX** **** XXXX, где X — это цифра номера"""
     if isinstance(card_number, int):
         card_number = str(card_number)
     if len(card_number) > 16:
         return ("Длина номера карты более 16 знаков")
-    elif card_number== "":
+    elif card_number == "":
         return "Номер карты отсутствует"
 
     place_of_space = [4, 9, 14]
@@ -18,7 +18,7 @@ def get_mask_card_number(card_number: Union[str, int]) -> str:
         if i in place_of_star:
             card_number_list[i] = "*"
         if i in place_of_space:
-            card_number_list.insert(i, " ")
+            card_number_list.insert(int(i), " ")
     return "".join(map(str, card_number_list))
 
 
@@ -37,9 +37,3 @@ def get_mask_account(bank_account: Union[str, int]) -> str:
             "*" if bank_account_list.index(el) in place_of_star else el for el in bank_account_list
         ]
         return "".join(map(str, bank_account_masks))
-
-
-if __name__ == "__main__":
-    None
-    #print(get_mask_card_number('7000792289606361'))
-    #print(get_mask_account(73654108430135874305))

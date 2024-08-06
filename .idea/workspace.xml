@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="gitignore add" />
+    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="README add">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_mask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_widget.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -266,12 +276,19 @@
       <option name="project" value="LOCAL" />
       <updated>1722965328440</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="README add">
+      <option name="closed" value="true" />
+      <created>1722965811971</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1722965811971</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tests add" />
-    <MESSAGE value="README add" />
     <MESSAGE value="get_mask_card_number add tests" />
     <MESSAGE value="get_mask_account_card add tests" />
     <MESSAGE value="mask_account_card add tests" />
@@ -280,6 +297,7 @@
     <MESSAGE value="sort_by_date add tests" />
     <MESSAGE value="unused del" />
     <MESSAGE value="gitignore add" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore add" />
+    <MESSAGE value="README add" />
+    <option name="LAST_COMMIT_MESSAGE" value="README add" />
   </component>
 </project>

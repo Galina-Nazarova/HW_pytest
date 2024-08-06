@@ -1,3 +1,5 @@
+
+
 def filter_by_state(dict_list: list, state_key='EXECUTED') -> list:
     """ Функция принимает список словарей и опционально значение
     для ключа state(по умолчанию 'EXECUTED'). Функция возвращает
@@ -22,21 +24,3 @@ def sort_by_date(dict_list: list, sort_rules: bool = True) -> list:
     Функция должна возвращать новый список, отсортированный
     по дате (date)."""
     return sorted(dict_list, key=lambda x: x['date'], reverse=sort_rules)
-
-"""
-if __name__ == '__main__':
-    data = [
-        {'id': 41428829, 'state': 'EXECUTED', 'date': '2018-10-14T18:35:29.512364'},
-        {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-10-14T02:08:58.425572'},
-        {'id': 594226727, 'state': 'CANCELED', 'date': '2018-10-14T21:27:25.241689'},
-        {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T08:21:33.419441'}
-    ]
-    print(filter_by_state(data, 'CANCELED'))
-    print(sort_by_date([
-        {'id': 41428829, 'state': 'EXECUTED', 'date': '2018-10-14T18:35:29.512364'},
-        {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-10-14T18:35:29.512364'},
-        {'id': 594226727, 'state': 'CANCELED', 'date': '2018-10-14T18:35:29.512364'},
-        {'id': 615064591, 'state': 'CANCELED', 'date': '2018-10-14T18:35:29.512364'}
-    ]))"""
-
-
