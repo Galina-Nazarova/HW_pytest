@@ -1,6 +1,3 @@
-import math
-
-
 def filter_by_state(dict_list: list, state_key='EXECUTED') -> list:
     """ Функция принимает список словарей и опционально значение
     для ключа state(по умолчанию 'EXECUTED'). Функция возвращает
@@ -26,12 +23,6 @@ def sort_by_date(dict_list: list, sort_rules: bool = True) -> list:
     по дате (date)."""
     return sorted(dict_list, key=lambda x: x['date'], reverse=sort_rules)
 
-def calculate_logariphm(x, base):
-    return math.log(x, base)
-
-
-def reverse_string(my_string):
-    return my_string[::-1]
 
 if __name__ == '__main__':
     data = [

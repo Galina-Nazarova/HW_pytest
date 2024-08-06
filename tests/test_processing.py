@@ -1,17 +1,6 @@
 import pytest
-from src.processing import calculate_logariphm, filter_by_state, sort_by_date
+from src.processing import filter_by_state, sort_by_date
 
-
-def test_calculate_logariphm():
-    assert calculate_logariphm(8, 2) == 3.0
-    assert calculate_logariphm(8, 4) == 1.5
-
-
-    with pytest.raises(ValueError):
-        calculate_logariphm(0, 2)
-
-    with pytest.raises(ValueError):
-        calculate_logariphm(8, 0)
 
 #Фикстура. Тестирование фильтрации списка словарей по заданному статусу state
 def test_filter_by_state(is_true_state_value):

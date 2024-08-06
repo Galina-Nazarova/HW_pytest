@@ -58,7 +58,3 @@ def test_get_date(is_true_data_formate):
 def test_get_date_parametrize(value, expected):
     assert get_date(value) == expected
 
-
-
-
-#Проверка, что функция корректно обрабатывает входные строки, где отсутствует дата
