@@ -7,7 +7,9 @@ import pytest
 def empty_string():
     return "Номер карты отсутствует" # ожидаемый результат
 
-
+@pytest.fixture
+def low_account_number():
+    return "Hомер счета меньше или больше ожидаемой длины" # ожидаемый результат
 
 @pytest.fixture
 def letters():
