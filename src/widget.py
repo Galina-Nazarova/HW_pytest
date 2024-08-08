@@ -1,7 +1,6 @@
-import src.mask as mk
 
-# после девелоп
-# develop
+
+import src.mask as mk
 
 
 def mask_account_card(type_and_number_of_card: str) -> str:
@@ -9,12 +8,13 @@ def mask_account_card(type_and_number_of_card: str) -> str:
      **XXXX, где X — это цифра номера счета
      XXXX XX** **** XXXX, где X — это цифра номера карты
       с названием
-
       """
     name = ''
     digit = ''
     for el in type_and_number_of_card:
-        if el.isdigit():
+        if el == '!':
+            raise AssertionError("Даны некорректные данные")
+        elif el.isdigit():
             digit += el
         else:
             name += el
@@ -29,6 +29,10 @@ def mask_account_card(type_and_number_of_card: str) -> str:
 def get_date(initial_data_format: str) -> str:
     """Функция вернет дату в соответствии с шаблоном
     "ДД.ММ.ГГГГ" ("11.03.2024") """
+    if initial_data_format == '':
+        raise AssertionError(
+            "Даны некорректные данные"
+        )
     date = initial_data_format[8:10] + '.'
     date_format = date + initial_data_format[5:7] + '.' + initial_data_format[:4]
     return date_format
