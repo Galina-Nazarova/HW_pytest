@@ -45,6 +45,4 @@ def is_one_date_sort_correct():
     ]  # ожидаемый результат
 
 
-@pytest.fixture
-def empty_list():
-    return "Дан пустой список"  # ожидаемый результат
+

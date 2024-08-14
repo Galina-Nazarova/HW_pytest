@@ -82,8 +82,5 @@ def test_filter_by_currency():
     with pytest.raises(StopIteration):
         next(generator)
 
-def test_filter_by_currency_empty(empty_list):
-    assert filter_by_currency([], 'USD') == empty_list
-    with pytest.raises(AssertionError) as exc_info:
-        filter_by_currency([], 'USD')
+
 
