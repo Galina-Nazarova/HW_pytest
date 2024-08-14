@@ -43,3 +43,8 @@ def is_one_date_sort_correct():
         {"id": 594226727, "state": "CANCELED", "date": "2018-10-14T18:35:29.512364"},
         {"id": 615064591, "state": "CANCELED", "date": "2018-10-14T18:35:29.512364"},
     ]  # ожидаемый результат
+
+
+@pytest.fixture
+def empty_list():
+    return "Дан пустой список"  # ожидаемый результат

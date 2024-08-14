@@ -4,16 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="README add">
+    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="add func_gen">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_mask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_widget.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_widget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_generators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,9 +44,9 @@
     &quot;accountId&quot;: &quot;bd3446a4-67ac-4b71-a4a4-a0fa23e82046&quot;
   }
 }</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
   <component name="ProjectId" id="2k1EyXNKz0syxfHVPUA9uuDGbRD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -62,19 +59,21 @@
     "Python tests.Python tests for test_processing.test_add.executor": "Run",
     "Python tests.Python tests in test_code_cov_try.py.executor": "Run",
     "Python tests.Python tests in test_filter_by_state.py.executor": "Run",
+    "Python tests.Python tests in test_generators.py.executor": "Run",
     "Python tests.Python tests in test_mask.py.executor": "Run",
     "Python tests.Python tests in test_processing.py.executor": "Run",
     "Python tests.Python tests in test_widget.py.executor": "Run",
     "Python.conftest.executor": "Run",
+    "Python.generators.executor": "Run",
     "Python.mask.executor": "Run",
     "Python.processing.executor": "Run",
     "Python.tdd_try.executor": "Run",
     "Python.test_processing.executor": "Run",
     "Python.widget.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature",
-    "last_opened_file_path": "C:/Pythom_prog/HW_pytest",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "git-widget-placeholder": "feature__task__3",
+    "last_opened_file_path": "C:/Users/silko/HW_pytest",
+    "settings.editor.selected.configurable": "configurable.group.project"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -164,10 +163,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.processing" />
         <item itemvalue="Python tests.Python tests for test_processing.test_add" />
         <item itemvalue="Python tests.Python tests for test_code_cov_try.test_finder_not_list" />
         <item itemvalue="Python.test_processing" />
-        <item itemvalue="Python.processing" />
         <item itemvalue="Python tests.Python tests for test_code_cov_try.test_finder_not_list" />
       </list>
     </recent_temporary>
@@ -284,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722965811971</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add func_gen">
+      <option name="closed" value="true" />
+      <created>1723669787712</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723669787712</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -298,6 +305,7 @@
     <MESSAGE value="unused del" />
     <MESSAGE value="gitignore add" />
     <MESSAGE value="README add" />
-    <option name="LAST_COMMIT_MESSAGE" value="README add" />
+    <MESSAGE value="add func_gen" />
+    <option name="LAST_COMMIT_MESSAGE" value="add func_gen" />
   </component>
 </project>
