@@ -127,7 +127,7 @@ def test_transaction_descriptions_parametrize(value, expected):
     assert next(generator) == expected
 
 
-def test_filter_by_currency():
+def transaction_descriptions():
     transactions = []
     generator = transaction_descriptions(transactions)
 
