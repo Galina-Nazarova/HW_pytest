@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="add func_gen">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject.iml" afterDir="false" />
+    <list default="true" id="11812d15-5af9-440c-ad08-d94c74b08255" name="Changes" comment="add test filter_by_currency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/generators.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/generators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
@@ -44,9 +42,9 @@
     &quot;accountId&quot;: &quot;bd3446a4-67ac-4b71-a4a4-a0fa23e82046&quot;
   }
 }</component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2k1EyXNKz0syxfHVPUA9uuDGbRD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -68,6 +66,7 @@
     "Python.mask.executor": "Run",
     "Python.processing.executor": "Run",
     "Python.tdd_try.executor": "Run",
+    "Python.test_generators.executor": "Run",
     "Python.test_processing.executor": "Run",
     "Python.widget.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -291,7 +290,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723669787712</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add one test">
+      <option name="closed" value="true" />
+      <created>1723672372843</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723672372843</updated>
+    </task>
+    <task id="LOCAL-00015" summary="add test filter_by_currency">
+      <option name="closed" value="true" />
+      <created>1723674734722</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1723674734722</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -306,6 +321,8 @@
     <MESSAGE value="gitignore add" />
     <MESSAGE value="README add" />
     <MESSAGE value="add func_gen" />
-    <option name="LAST_COMMIT_MESSAGE" value="add func_gen" />
+    <MESSAGE value="add one test" />
+    <MESSAGE value="add test filter_by_currency" />
+    <option name="LAST_COMMIT_MESSAGE" value="add test filter_by_currency" />
   </component>
 </project>

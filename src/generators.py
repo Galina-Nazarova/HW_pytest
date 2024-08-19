@@ -3,8 +3,7 @@ def filter_by_currency(transactions: list, type_of_valuta: str):
     Функция генератор возвращает итератор, который поочередно выдает транзакции,
     где валюта операции соответствует заданной (например, USD)."""
     # цикл для перебора элементов списка - словарей
-    if len(transactions) == []:
-        raise AssertionError("Дан пустой список")
+
 
     for transaction in transactions:
         # условие для проверки равенства значения ключей "name" и "code" аданному аргументу
@@ -76,10 +75,10 @@ if __name__ == '__main__':
             "to": "Счет 75651667383060284188"
         }
     ]
-    usd_transactions = filter_by_currency(transactions, "Evro")
+    usd_transactions = filter_by_currency(transactions, "USD")
     for _ in range(2):
         print(next(usd_transactions))
-
+    #вторая функция
     descriptions = transaction_descriptions(transactions)
     for _ in range(2):
         print(next(descriptions))
