@@ -10,7 +10,7 @@
 
 1. Клонируйте репозиторий:
 ```
-git clone https://github.com/Galina-Nazarova/try_06_07_poetry.git
+git clone [https://github.com/Galina-Nazarova/try_06_07_poetry.git](https://github.com/Galina-Nazarova/HW_pytest.git)
 ```
 
 2. Установите зависимости:
