@@ -1,8 +1,10 @@
 
 
 import src.mask as mk
+from src.decorators import log
 
 
+@log("ress.txt")
 def mask_account_card(type_and_number_of_card: str) -> str:
     """Функция вернет замаскированный номер счета в соответствии с шаблоном
      **XXXX, где X — это цифра номера счета
@@ -25,7 +27,7 @@ def mask_account_card(type_and_number_of_card: str) -> str:
         card_number_masks = mk.get_mask_card_number(int(digit))
         return name + card_number_masks
 
-
+@log()
 def get_date(initial_data_format: str) -> str:
     """Функция вернет дату в соответствии с шаблоном
     "ДД.ММ.ГГГГ" ("11.03.2024") """
@@ -40,7 +42,7 @@ def get_date(initial_data_format: str) -> str:
 
 if __name__ == "__main__":
 
-    print(mask_account_card('Счет 35383033474447895560'))
-    print(get_date("2024-03-11T02:26:18.671407"))
+    mask_account_card('Счет 35383033474447895560')
+    get_date("2024-03-11T02:26:18.671407")
     # print(get_mask_card_number(7000792289606361))
     # print(get_mask_account(73654108430135874305))
