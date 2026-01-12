@@ -4,7 +4,7 @@ import src.mask as mk
 from src.decorators import log
 
 
-@log("ress.txt")
+@log()
 def mask_account_card(type_and_number_of_card: str) -> str:
     """Функция вернет замаскированный номер счета в соответствии с шаблоном
      **XXXX, где X — это цифра номера счета
