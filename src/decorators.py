@@ -1,30 +1,23 @@
 import functools
-from time import time
+import time
+import logging
 
-
-def log(filename=False):
-    """
-    Декоратор, который создает файл и записывает результат
-    декорируемой функции в него
-    """
-
-    def logging(function):
+def log(log_filename=False):
+    def logs(function):
         @functools.wraps(function)
         def wrapper(*args, **kwargs):
-            time_1 = time()
-            result = function(*args, **kwargs)
-            time_2 = time()
-            if not filename:
-                print(
-                    f'{function.__name__}: {result}. Inputs:{args}, {kwargs}'
-                )
+            if log_filename:
+                logging.basicConfig(filename=log_filename, level=logging.INFO,
+                                    format='%(asctime)s - %(levelname)s - %(message)s')
             else:
-                with open(filename, 'w', encoding='utf-8') as file:
-                    file.write(
-                        f'{function.__name__}: {result}. Inputs:{args}, {kwargs}'
-                    )
-            return result
-
+                logging.basicConfig(level=logging.INFO,
+                                    format='%(asctime)s - %(levelname)s - %(message)s')
+            try:
+                result = function(*args, **kwargs)
+                logging.info(f"{function.__name__}: {result}. Inputs:{args}, {kwargs}")
+                return result
+            except Exception as e:
+                logging.error(f"{function.__name__}: {e}. Inputs:{args}, {kwargs}", exc_info=True)
+                raise # Перебрасываем исключение
         return wrapper
-
-    return logging
+    return logs
