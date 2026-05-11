@@ -27,6 +27,7 @@ def mask_account_card(type_and_number_of_card: str) -> str:
         card_number_masks = mk.get_mask_card_number(int(digit))
         return name + card_number_masks
 
+
 @log()
 def get_date(initial_data_format: str) -> str:
     """Функция вернет дату в соответствии с шаблоном
@@ -36,7 +37,8 @@ def get_date(initial_data_format: str) -> str:
             "Даны некорректные данные"
         )
     date = initial_data_format[8:10] + '.'
-    date_format = date + initial_data_format[5:7] + '.' + initial_data_format[:4]
+    date_format = (date + initial_data_format[5:7] +
+                   '.' + initial_data_format[:4])
     return date_format
 
 
