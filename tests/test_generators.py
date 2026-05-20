@@ -1,9 +1,6 @@
 import pytest
-from src.generators import (
-    filter_by_currency,
-    transaction_descriptions,
-    card_number_generator,
-)
+from src.generators import (card_number_generator, filter_by_currency,
+                            transaction_descriptions)
 
 
 def test_filter_by_currency():
@@ -85,38 +82,38 @@ def test_filter_by_currency_empty():
     "value, expected",
     [
         (
-            [
-                {
-                    "id": 939719570,
-                    "state": "EXECUTED",
-                    "date": "2018-06-30T02:08:58.425572",
-                    "operationAmount": {
-                        "amount": "9824.07",
-                        "currency": {"name": "USD", "code": "USD"},
-                    },
-                    "description": "Перевод организации",
-                    "from": "Счет 75106830613657916952",
-                    "to": "Счет 11776614605963066702",
-                }
-            ],
-            "Перевод организации",
+                [
+                    {
+                        "id": 939719570,
+                        "state": "EXECUTED",
+                        "date": "2018-06-30T02:08:58.425572",
+                        "operationAmount": {
+                            "amount": "9824.07",
+                            "currency": {"name": "USD", "code": "USD"},
+                        },
+                        "description": "Перевод организации",
+                        "from": "Счет 75106830613657916952",
+                        "to": "Счет 11776614605963066702",
+                    }
+                ],
+                "Перевод организации",
         ),
         (
-            [
-                {
-                    "id": 939719570,
-                    "state": "EXECUTED",
-                    "date": "2018-06-30T02:08:58.425572",
-                    "operationAmount": {
-                        "amount": "9824.07",
-                        "currency": {"name": "USD", "code": "USD"},
-                    },
-                    "description": "Перевод между своими счетами",
-                    "from": "Счет 75106830613657916952",
-                    "to": "Счет 11776614605963066702",
-                }
-            ],
-            "Перевод между своими счетами",
+                [
+                    {
+                        "id": 939719570,
+                        "state": "EXECUTED",
+                        "date": "2018-06-30T02:08:58.425572",
+                        "operationAmount": {
+                            "amount": "9824.07",
+                            "currency": {"name": "USD", "code": "USD"},
+                        },
+                        "description": "Перевод между своими счетами",
+                        "from": "Счет 75106830613657916952",
+                        "to": "Счет 11776614605963066702",
+                    }
+                ],
+                "Перевод между своими счетами",
         ),
     ],
 )
@@ -125,10 +122,17 @@ def test_transaction_descriptions_parametrize(value, expected):
     assert next(generator) == expected
 
 
-def transaction_descriptions():
+def test_transaction_descriptions_empty():
     transactions = []
     generator = transaction_descriptions(transactions)
 
+    with pytest.raises(StopIteration):
+        next(generator)
+
+
+def test_transaction_descriptions_empty():  # Переименовали
+    transactions = []
+    generator = transaction_descriptions(transactions)  # Теперь вызовется генератор из src
     with pytest.raises(StopIteration):
         next(generator)
 

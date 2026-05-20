@@ -1,23 +1,36 @@
 import functools
-import time
-import logging
+from typing import Any, Callable, Optional
 
-def log(log_filename=False):
-    def logs(function):
-        @functools.wraps(function)
-        def wrapper(*args, **kwargs):
-            if log_filename:
-                logging.basicConfig(filename=log_filename, level=logging.INFO,
-                                    format='%(asctime)s - %(levelname)s - %(message)s')
-            else:
-                logging.basicConfig(level=logging.INFO,
-                                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+def log(filename: Optional[str] = None) -> Callable:
+    """
+    Декоратор, который логирует вызов функции и ее результат.
+    Если filename передан, пишет в файл, иначе — в консоль.
+    """
+    def wrapper(func: Callable) -> Callable:
+        @functools.wraps(func)
+        def inner(*args: Any, **kwargs: Any) -> Any:
             try:
-                result = function(*args, **kwargs)
-                logging.info(f"{function.__name__}: {result}. Inputs:{args}, {kwargs}")
+                result = func(*args, **kwargs)
+                log_msg = f"{func.__name__}: {result}. Inputs:{args}, {kwargs}"
+
+                if filename:
+                    with open(filename, "a", encoding="utf-8") as f:
+                        f.write(log_msg + "\n")
+                else:
+                    print(log_msg)
+
                 return result
             except Exception as e:
-                logging.error(f"{function.__name__}: {e}. Inputs:{args}, {kwargs}", exc_info=True)
-                raise # Перебрасываем исключение
-        return wrapper
-    return logs
+                log_msg = (
+                    f"{func.__name__} error: {type(e).__name__}. "
+                    f"Inputs: {args}, {kwargs}"
+                )
+                if filename:
+                    with open(filename, "a", encoding="utf-8") as f:
+                        f.write(log_msg + "\n")
+                else:
+                    print(log_msg)
+                raise e
+        return inner
+    return wrapper
