@@ -40,7 +40,7 @@ def convert_transactions(transaction: Dict[str, Any]) -> float:
 
         if currency in ["USD", "EUR"]:
             # ИСПРАВЛЕННЫЙ URL (строго по документации API)
-            url = f"https://apilayer.com{currency}&amount={amount}"
+            url = f"https://api.apilayer.com/exchangerates_data/convert?to=RUB&from={currency}&amount={amount}"
             headers = {"apikey": API_KEY}
 
             response = requests.get(url, headers=headers, timeout=5)
@@ -51,3 +51,6 @@ def convert_transactions(transaction: Dict[str, Any]) -> float:
 
     except Exception:
         return 0.0
+
+
+
