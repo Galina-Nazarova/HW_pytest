@@ -44,8 +44,9 @@ def convert_transactions(transaction: Dict[str, Any]) -> float:
             headers = {"apikey": API_KEY}
 
             response = requests.get(url, headers=headers, timeout=5)
+            status_code = response.status_code
+            print('f Статус код:{status_code}')
             response.raise_for_status()
-
             data = response.json()
             return float(data.get("result", 0.0))
 
