@@ -1,4 +1,5 @@
 import pytest
+
 from src.generators import (card_number_generator, filter_by_currency,
                             transaction_descriptions)
 
@@ -122,17 +123,9 @@ def test_transaction_descriptions_parametrize(value, expected):
     assert next(generator) == expected
 
 
-def test_transaction_descriptions_empty():
-    transactions = []
-    generator = transaction_descriptions(transactions)
-
-    with pytest.raises(StopIteration):
-        next(generator)
-
-
 def test_transaction_descriptions_empty():  # Переименовали
     transactions = []
-    generator = transaction_descriptions(transactions)  # Теперь вызовется генератор из src
+    generator = transaction_descriptions(transactions)
     with pytest.raises(StopIteration):
         next(generator)
 
