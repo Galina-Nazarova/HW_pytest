@@ -1,8 +1,8 @@
 import os
 from typing import Any, Dict
+
 import requests
 from dotenv import load_dotenv
-
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
@@ -39,19 +39,24 @@ def convert_transactions(transaction: Dict[str, Any]) -> float:
             return amount
 
         if currency in ["USD", "EUR"]:
-            # ИСПРАВЛЕННЫЙ URL (строго по документации API)
-            url = f"https://api.apilayer.com/exchangerates_data/convert?to=RUB&from={currency}&amount={amount}"
+            url = "https://api.apilayer.com/exchangerates_data/convert"
+
+            params = {
+                "to": "RUB",
+                "from": currency,
+                "amount": amount
+            }
+
             headers = {"apikey": API_KEY}
 
-            response = requests.get(url, headers=headers, timeout=5)
+            response = requests.get(
+                url, params=params, headers=headers, timeout=5
+            )
             status_code = response.status_code
-            print('f Статус код:{status_code}')
+            print(f' Статус код:{status_code}')
             response.raise_for_status()
             data = response.json()
             return float(data.get("result", 0.0))
 
     except Exception:
         return 0.0
-
-
-

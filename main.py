@@ -13,11 +13,3 @@ for transaction in transactions:
         rub_amount = convert_transactions(transaction)
 
         print(rub_amount)
-
-"""amounts_in_rub = []
-
-for transaction in transactions:
-    rub_amount = convert_transactions(transaction)
-    amounts_in_rub.append(rub_amount)
-
-print(amounts_in_rub)"""

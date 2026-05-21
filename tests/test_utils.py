@@ -1,5 +1,4 @@
 import json
-import pytest
 from src.utils import get_data
 
 
@@ -42,7 +41,11 @@ def test_get_data_invalid_json(mocker):
     """Тест: файл содержит ошибку (не JSON) -> должен вернуться []"""
     mocker.patch("src.utils.Path.exists", return_value=True)
     mocker.patch("builtins.open", mocker.mock_open(read_data='invalid json'))
-    mocker.patch("json.load", side_effect=json.JSONDecodeError("msg", "doc", 0))
+    mocker.patch(
+        "json.load", side_effect=json.JSONDecodeError(
+            "msg", "doc", 0
+        )
+    )
 
     assert get_data("corrupt.json") == []
 

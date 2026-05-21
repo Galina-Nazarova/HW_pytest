@@ -1,10 +1,9 @@
-import pytest
-
 from src.external_api import convert_transactions
 
 
 def test_convert_transactions_rub():
-    """Проверяет, если валюта RUB, API не вызывается, возвращается сумма как float"""
+    """Проверяет, если валюта RUB, API не вызывается,
+    возвращается сумма как float"""
     transaction = {
         "operationAmount": {
             "amount": "100.50",

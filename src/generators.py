@@ -9,8 +9,13 @@ def filter_by_currency(transactions: list, type_of_valuta: str):
     # - словарей
 
     for transaction in transactions:
-        # условие для проверки равенства значения ключей "name" и "code" аданному аргументу
-        if transaction["operationAmount"]["currency"]["name"] == type_of_valuta and transaction["operationAmount"]["currency"]["code"] == type_of_valuta:
+        # условие для проверки равенства значения
+        # ключей "name" и "code" аданному аргументу
+        if (
+                transaction["operationAmount"]["currency"]["name"] == type_of_valuta
+                and
+                transaction["operationAmount"]["currency"]["code"] == type_of_valuta
+        ):
             yield transaction
 
 
@@ -33,7 +38,9 @@ def card_number_generator(start: int, stop: int):
     Генератор должен принимать начальное и конечное
     значения для генерации диапазона номеров."""
     for number in range(start, stop+1):
-        yield ' '.join("{:016}".format(number)[i:i + 4] for i in range(0, 16, 4))
+        yield ' '.join(
+            "{:016}".format(number)[i:i + 4] for i in range(0, 16, 4)
+        )
 
 
 if __name__ == '__main__':
