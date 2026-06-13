@@ -1,7 +1,5 @@
 from pathlib import Path
 
-from src.external_api import convert_transactions
-from src.mask import get_mask_account, get_mask_card_number
 from src.data_load import read_csv_transactions, read_excel_transactions
 from src.external_api import convert_transactions
 from src.mask import get_mask_account, get_mask_card_number
