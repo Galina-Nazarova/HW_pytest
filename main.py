@@ -4,7 +4,7 @@ from typing import Any, Dict, List
 
 from src.data_load import read_csv_transactions, read_excel_transactions
 from src.processing import sort_by_date
-from src.search_data import process_bank_operations, process_bank_search
+from src.search_data import process_bank_search
 from src.utils import get_data  # Чтение JSON
 from src.widget import get_date, mask_account_card
 
@@ -67,7 +67,12 @@ def main() -> None:
         print("\nПрограмма: Отсортировать по возрастанию или по убыванию?")
         sort_order = input("Пользователь: ").strip().lower()
 
-        is_reverse = True if "убыван" in sort_order else False
+        # ИСПРАВЛЕНО: привязываем выбор пользователя к логическому флагу
+        if "убыван" in sort_order:
+            is_reverse = True
+        else:
+            is_reverse = False
+
         filtered_data = sort_by_date(filtered_data, sort_rules=is_reverse)
 
     print("\nПрограмма: Выводить только рублевые транзакции? Да/Нет")
@@ -139,13 +144,6 @@ def main() -> None:
         print(transfer_route)
         print(f"Сумма: {amount} {cur_name}\n")
 
-        print("--- Аналитика категорий в итоговой выборке ---")
-        cats = [
-            "Перевод организации",
-            "Перевод со счета на счет",
-            "Открытие вклада"
-        ]
-        print(process_bank_operations(filtered_data, cats))
 
-    if __name__ == "__main__":
-        main()
+if __name__ == "__main__":
+    main()
